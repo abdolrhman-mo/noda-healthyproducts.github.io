@@ -1,0 +1,14 @@
+extend assets/extends/template
+block link 
+  link(rel="stylesheet", href="assets/css/style.css")
+block body
+  h1 مرحباََ بكم في Noda Healthy Products 
+  each val in faq
+    .session 
+      h2= val[0]
+      article= val[1]
+  .offers 
+    a(href="greenway/greenway.html")
+      button Greenway
+    a(href="tupperware/tupperware.html")
+      button Tupperware

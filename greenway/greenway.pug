@@ -1,0 +1,19 @@
+extend ../assets/extends/template
+block link
+    link(rel="stylesheet", href="../assets/css/style.css")
+block body 
+    h1 قسم GREENWAY
+    a(
+        href="https://drive.google.com/file/d/1olDjgTAYd1jxvZRHKrGlsDhJQCDzd2Dd/view?usp=sharing",
+        target="_blank"
+    )    
+        button(class= "weird") عرض كل المنتجات
+    each val in greenwayFaq
+        .session 
+            h2= val[0]
+            if typeof(val[1]) == "string"
+                article= val[1]
+            else 
+                article
+                    each item in val[1]
+                        p= item
